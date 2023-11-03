@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>callback</title>
+</head>
+<body>
+  <h1>CallBack Function</h1>
+<script>
+   <!-------callback------>
+  
+         Function first(val){
+          if(val=="pizza"){
+        console.log("your order confirmed");
+        func2(first)
+	}
+    else{
+	   console.log("sorry this dish is not available");
+	   }
+	} 
+   let t=prompt("Enter your dish name");
+     first(t)
+   function func2(del){
+     setTimeout()=>
+    console.log("your order is on the way");
+  },1000)
+}
+
+
+     <!----------2----------->
+	 
+	let ans,ans2,ans3;
+     Function operation (num1,num2,callback){
+       let p=num1/num2,callback){
+        callback(p);
+       }
+	    
+		operation(60,2,divide=>{
+		 ans=divide;
+		 console.log("Result of the first callback:" +ans);
+	})
+       	operation(ans,3,divide=>{
+        ans2=divide;
+        console.log("Result of the second callback:" +ans2);
+     })
+	     
+        operation(ans2,5,divide=>{
+		ans3=divide;
+		console.log("Result of the third callback:" +ans);
+	})
+	  <!---------3----------->
+	  
+	  let res1, res2, res3
+	   function operation2(n1, n2, callback2){
+	    let q=n1+n2;
+		callback2(q);
+	}
+	   operation2(10,5,sum=>{
+	   res1=sum;
+	   console.log("Result of the first callback:"+res2);
+	})
+	   operation2(res1,10,sum=>{
+	   res2=sum;
+	   console.log("Result of the second callback:" +res3);
+	})
+	   <!--------promise------>
+	   
+	   let coin=prompt("Enter your choice");
+	   let ans 5=new promise((resolve)=>{
+	    if(coin=="head"){
+		resolve("success");
+	}
+	else{
+	   reject("fail")
+	   }
+	})
+	  ans5.then((msg)=>{
+	  console.log(msg);
+	})
+      .catch((err)=>{
+      console.log(err);	
+    })
+    
+    <!--------1------->
+     
+    let food=prompt("your order please");
+    let result=new promise((resolve, reject)=>{
+	if (food=="pizza"){
+	setTimeout(()=>{
+	resolve("your order is taken and it is on the way");
+	
+  },3000);
+}
+    else{
+	   setTimeout(()=>
+	   reject("your order cancelled")},1000);
+	  }
+    })
+	
+    result.then((msg)=>{
+    console.log(msg);
+   })
+   
+    .catch((err)=>{
+    console.log(err);
+   })
+</script>
+</body>
+</html>   
+	   
+      	  
+		
+	   
+	
+   
+	
